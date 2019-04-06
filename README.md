@@ -86,3 +86,9 @@ Overview:  We will start an unbuntu container and run it in an interactive mode.
 |  `docker` | `run` | `-it` | `ubuntu` | `bash` |
 |:----------|:------|:------|:---------|:------|
 |Use the docker library| to run | in interactive mode | The ubuntu image | and execute the bash command|
+
+You should now have access to the command line from your ubuntu container!  You can explore this with your partner using the common commands (i.e. `cd`,`ls`,`mkdir`)
+
+If you want to exit out of it, you can use the following command to *detach* from the container and return to your working directory:
+
+`CTRL + P` then `CTRL + Q`
