@@ -55,7 +55,7 @@ To complete this, you must run the list command for docker and pipe the results 
 
 
 |         | Command           | Explanation  |
-|:--:|:------------------------------------:|:---:|
+|:--:|:------------------------------------|:---|
 |1.| `echo Docker Lifecycle Tutorial Part 1 > test.txt`|Create a new file & put the first line into it|
 |2.| `docker ps -a >> test.txt`|Run the command and pass the output into the file|
 |3.| `printf '%20s\n' &#124; tr ' ' - >> test.txt` |Print a horizontal line after the output|
