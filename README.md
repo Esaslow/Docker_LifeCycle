@@ -82,5 +82,5 @@ Awesome so we are now going to the fun part!  We are actually going to create a 
 Overview:  We will start an unbuntu container and run it in an interactive mode.  Underneath the hood, the container behaves exactly like a ubuntu virtual machine with a command line.  This means that we treat the container as if it where a remote computer that has no ability to access your file system.  You can look around in the file system to verify this without being afraid of hurting anything!  To begin to explore the ubuntu containter, user the following command:
 - `docker run -it ubuntu bash`
 |  `docker` | `run` | `-it` | `ubuntu` | `bash` |
-|:--|:------|:------|:------|:---------|:------|
+|:----------|:------|:------|:---------|:------|
 |Use the docker library| to run | in interactive mode | The ubuntu image | and execute the bash command|
