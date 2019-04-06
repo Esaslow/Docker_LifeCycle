@@ -39,7 +39,7 @@ We will answer this second question first: `docker image ls`
 
 This command will return all the docker images that are on your computer.  As you can see the hello-world image is still on your computer, but is it running?
 
-To check to see if your container is still running we can use the command: `docker ps`
+To check to see if your container is still running we can use the command: `docker ps` . This command is for listing the containers and could be used with a [multitude fo flags](https://docs.docker.com/engine/reference/commandline/ps/)
 
 When we run this command, we see that nothing shows up which implies that the container that we created has *exited* successfully.  With that said, lets be robust and make sure that we know that the container is exited successfully.  
 
@@ -47,7 +47,7 @@ To do this, we will be running the same command with the `-a` flag which is a sh
 
 - `docker ps -a` 
 
-This wills how you all of the containers that you have run and their current status.  You will see that your `hello-world` successfully exited under the column *status*.
+This will show you all of the containers that you have run and their current status.  You will see that your `hello-world` successfully exited under the column *status*.
 
 To finish part 1, we will be using a bash command to write out our results to a text file.  To do this, we will use the same command as above, but will add the output to a file called `test.txt`.
 
