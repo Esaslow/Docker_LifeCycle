@@ -41,6 +41,25 @@ This command will return all the docker images that are on your computer.  As yo
 
 To check to see if your container is still running we can use the command: `docker ps`
 
-When we run this command, we see that nothing shows up which implies that the container that we created has *exited* successfully.  With that said, lets be robust and identify a way 
+When we run this command, we see that nothing shows up which implies that the container that we created has *exited* successfully.  With that said, lets be robust and make sure that we know that the container is exited successfully.  
+
+To do this, we will be running the same command with the `-a` flag which is a short for `--all`
+
+- `docker ps -a` 
+
+This wills how you all of the containers that you have run and their current status.  You will see that your `hello-world` successfully exited under the column *status*.
+
+To finish part 1, we will be using a bash command to write out our results to a text file.  To do this, we will use the same command as above, but will add the output to a file called `test.txt`.
+
+To complete this, you must run the list command for docker and pipe the results into the text file:
+
+`docker ps -a > test.txt`
+
+To check that this worked we can take a peak at what is inside of the 'test.txt' file using the following command:
+
+`cat test.txt`
+
+
+### Part 2: Life Cycle Management
 
 
