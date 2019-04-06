@@ -39,7 +39,7 @@ We will answer this second question first: `docker image ls`
 
 This command will return all the docker images that are on your computer.  As you can see the hello-world image is still on your computer, but is it running?
 
-To check to see if your container is still running we can use the command: `docker ps` . This command is for listing the containers and could be used with a [multitude fo flags](https://docs.docker.com/engine/reference/commandline/ps/)
+To check to see if your container is still running we can use the command: `docker ps` . This command is for listing the containers and could be used with a [multitude of flags](https://docs.docker.com/engine/reference/commandline/ps/)
 
 When we run this command, we see that nothing shows up which implies that the container that we created has *exited* successfully.  With that said, lets be robust and make sure that we know that the container is exited successfully.  
 
@@ -77,3 +77,10 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 ### Part 2: Life Cycle Management
 
 
+Awesome so we are now going to the fun part!  We are actually going to create a Container that will have some functional components!  We will begin by starting a container in an interactive mode so that we can better understand the fundamental concept of what a container is. 
+
+Overview:  We will start an unbuntu container and run it in an interactive mode.  Underneath the hood, the container behaves exactly like a ubuntu virtual machine with a command line.  This means that we treat the container as if it where a remote computer that has no ability to access your file system.  You can look around in the file system to verify this without being afraid of hurting anything!  To begin to explore the ubuntu containter, user the following command:
+- `docker run -it ubuntu bash`
+|  `docker` | `run` | `-it` | `ubuntu` | `bash` |
+|:--|:------|:------|:------|:---------|:------|
+|Use the docker library| to run | in interactive mode | The ubuntu image | and execute the bash command|
