@@ -62,6 +62,13 @@ To check that this worked we can take a peak at what is inside of the 'test.txt'
 
 `cat test.txt`
 
+Assuming that this worked, your output should look like the following:
+```
+Docker Lifecycle Tutorial Part 1
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+272376a97ecc        hello-world         "/hello"            5 minutes ago       Exited (0) 5 minutes ago                       optimistic_ardinghelli
+--------------------
+```
 
 ### Part 2: Life Cycle Management
 
