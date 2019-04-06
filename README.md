@@ -76,7 +76,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### Part 2: Life Cycle Management
 
-
+#### Starting the Ubuntu Container
 Awesome so we are now going to the fun part!  We are actually going to create a Container that will have some functional components!  We will begin by starting a container in an interactive mode so that we can better understand the fundamental concept of what a container is. 
 
 Overview:  We will start an unbuntu container and run it in an interactive mode.  Underneath the hood, the container behaves exactly like a ubuntu virtual machine with a command line.  This means that we treat the container as if it where a remote computer that has no ability to access your file system.  You can look around in the file system to verify this without being afraid of hurting anything!  To begin to explore the ubuntu containter, user the following command:
@@ -91,4 +91,36 @@ You should now have access to the command line from your ubuntu container!  You 
 
 If you want to exit out of it, you can use the following command to *detach* from the container and return to your working directory:
 
-`CTRL + P` then `CTRL + Q`
+- *Detach*: `CTRL + P` then `CTRL + Q`
+
+- *Attach*: `docker attach CONTAINER` where you must specify the *Container ID* 
+
+#### Pausing the Container
+Now that you are out of the container, let go ahead and check the status of the containers running on the computer!  Remember how we did that above?  `docker ps`
+
+You should see that you have a container that as of a couple of minutes ago was up.  This means that you still have that container running in the background.  Lets explore the different states that we can put this container in!
+
+The first state we will look at is *paused* To pause your container, we need one piece of information: the container id.  You can easily find this by running the command: `docker ps` to list all the current containers and grab the id from the container id column.  
+
+Once you have the container id, you can then use this in the following command, and replacing <ContainerID> with your container id:
+
+- `docker pause <containerid or name>`
+
+This pauses all of the running processes that are currently running inside of the container.  
+
+- Try to attach to the paused container!  What happens?!  Discuss this in your pair or group
+
+Now, we can go ahead and unpause the container with a command that is formatted very similarly
+
+- `docker unpause <containerid or name>`
+
+On a quick sidenote, it is easy to name your container with a specific convention and then use this isntead of the id.
+
+
+#### Start 
+
+#### Restart
+
+#### Kill
+
+#### Destroy
