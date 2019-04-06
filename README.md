@@ -54,9 +54,9 @@ To finish part 1, we will be using a bash command to write out our results to a 
 To complete this, you must run the list command for docker and pipe the results into the text file:
 1. `echo Docker Lifecycle Tutorial Part 1 > test.txt`
 2. `docker ps -a >> test.txt`
-3. `echo '-'*10 >> test.txt`
+3. `printf '%20s\n' | tr ' ' - >> test.txt`  
 
-
+The last command just adds a horizontal line to the bottom of your test file to seperate part 1 and part 2
 
 To check that this worked we can take a peak at what is inside of the 'test.txt' file using the following command:
 
