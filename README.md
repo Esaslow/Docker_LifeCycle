@@ -52,6 +52,8 @@ This will show you all of the containers that you have run and their current sta
 To finish part 1, we will be using a bash command to write out our results to a text file.  To do this, we will use the same command as above, but will add the output to a file called `test.txt`.
 
 To complete this, you must run the list command for docker and pipe the results into the text file:
+
+
 |         | Command           | Explanation  |
 |:--:|:------------------------------------:|:---:|
 |1.| `echo Docker Lifecycle Tutorial Part 1 > test.txt`|Create a new file & put the first line into it|
