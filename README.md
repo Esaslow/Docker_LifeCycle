@@ -5,14 +5,14 @@ Today we are going to explore Container Lifecycle Management with Docker.  We wi
 
 ### Part 0: Checking Docker installation  
 To begin, we must check to make sure that docker was installed correctly on your machine.  To do this, we are going to run the following command through your command line:
-- `docker --version`
+- `$ docker --version`
 If after this command, your terminal printed out a docker version number with a build number, you are good to go!  Otherwise, make sure you have [installed docker](https://docs.docker.com/docker-for-mac/install/)
 
 ### Part 1: Running your first container
 We will start at the very begining in using a container - *Hello World!* 
 
 To do run a container from a pre-existing image, we will use the `run` command followed by the image name we would like to run.  In this case we are using the pre-existing image of [`hello-world`](https://hub.docker.com/_/hello-world)
-- `docker run hello-world`
+- `$ docker run hello-world`
 
 The Docker run command will be your bread and butter -- you will use this command every time that you want to start any container.
 After you run this command, you should see the following print out:
@@ -35,17 +35,17 @@ Lets begin to talk about what just happened (and cover what is going on inside o
 - Is the container still running?
 - Is the container still on my local machine?
 
-We will answer this second question first: `docker image ls`
+We will answer this second question first: `$ docker image ls`
 
 This command will return all the docker images that are on your computer.  As you can see the hello-world image is still on your computer, but is it running?
 
-To check to see if your container is still running we can use the command: `docker ps` . This command is for listing the containers and could be used with a [multitude of flags](https://docs.docker.com/engine/reference/commandline/ps/)
+To check to see if your container is still running we can use the command: `$ docker ps` . This command is for listing the containers and could be used with a [multitude of flags](https://docs.docker.com/engine/reference/commandline/ps/)
 
 When we run this command, we see that nothing shows up which implies that the container that we created has *exited* successfully.  With that said, lets be robust and make sure that we know that the container is exited successfully.  
 
 To do this, we will be running the same command with the `-a` flag which is a short for `--all`
 
-- `docker ps -a` 
+- `$ docker ps -a` 
 
 This will show you all of the containers that you have run and their current status.  You will see that your `hello-world` successfully exited under the column *status*.
 
@@ -56,15 +56,15 @@ To complete this, you must run the list command for docker and pipe the results 
 
 |         | Command           | Explanation  |
 |:--:|:------------------------------------|:---|
-|1.| `echo Docker Lifecycle Tutorial Part 1 > test.txt`|Create a new file & put the first line into it|
-|2.| `docker ps -a >> test.txt`|Run the command and pass the output into the file|
-|3.| `printf '%20s\n' &#124; tr ' ' - >> test.txt` |Print a horizontal line after the output|
+|1.| `$ echo Docker Lifecycle Tutorial Part 1 > test.txt`|Create a new file & put the first line into it|
+|2.| `$ docker ps -a >> test.txt`|Run the command and pass the output into the file|
+|3.| `$ printf '%20s\n' &#124; tr ' ' - >> test.txt` |Print a horizontal line after the output|
 
 The last command just adds a horizontal line to the bottom of your test file to seperate part 1 and part 2
 
 To check that this worked we can take a peak at what is inside of the 'test.txt' file using the following command:
 
-`cat test.txt`
+ `$ cat test.txt`
 
 Assuming that this worked, your output should look like the following:
 ```
@@ -78,20 +78,20 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 #### Recap and cheat sheet
 ```
 ## List Docker CLI commands
-docker
-docker container --help
+$ docker
+$ docker container --help
 
 ## Display Docker version and info
-docker --version
-docker version
-docker info
+$ docker --version
+$ docker version
+$ docker info
 
 ## Execute Docker image
-docker run hello-world
+$ docker run hello-world
 
 ## List Docker containers (running, all, all in quiet mode)
-docker container ls
-docker container ls --all
+$ docker container ls
+$ docker container ls --all
 ```
 
 ### Part 2: Life Cycle Management
