@@ -11,7 +11,7 @@ If after this command, your terminal printed out a docker version number with a 
 ### Part 1: Running your first container
 We will start at the very begining in using a container - *Hello World!* 
 
-To do this, we will run the following command in the terminal:
+To do run a container from a pre-existing image, we will use the `run` command followed by the image name we would like to run.  In this case we are using the pre-existing image of [`hello-world`](https://hub.docker.com/_/hello-world)
 - `docker run hello-world`
 
 The Docker run command will be your bread and butter -- you will use this command every time that you want to start any container.
