@@ -165,3 +165,8 @@ For the assessment, you need to follow these instructions:
 
 #### Feedback
 [Please provide feedback on how this class went & your experiance with docker today](https://docs.google.com/forms/d/e/1FAIpQLSfxNTxE8JSr5EmO1CK93lm7SjvulszjjMTCrDPynJJpPxXpeQ/viewform?usp=sf_link)
+
+
+To remove all the stopped docker containers
+
+`docker rm $(docker ps -q -f status=exited)`
