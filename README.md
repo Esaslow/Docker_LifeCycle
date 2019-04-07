@@ -96,11 +96,11 @@ If you want to exit out of it, you can use the following command to *detach* fro
 - *Attach*: `docker attach CONTAINER` where you must specify the *Container ID* 
 
 #### Pausing the Container
-Now that you are out of the container, let go ahead and check the status of the containers running on the computer!  Remember how we did that above?  `docker ps`
+Now that you are out of the container, let go ahead and check the status of the containers running on the computer!  Remember how we did that above?  `docker ps -a`
 
 You should see that you have a container that as of a couple of minutes ago was up.  This means that you still have that container running in the background.  Lets explore the different states that we can put this container in!
 
-The first state we will look at is *paused* To pause your container, we need one piece of information: the container id.  You can easily find this by running the command: `docker ps` to list all the current containers and grab the id from the container id column.  
+The first state we will look at is *paused* To pause your container, we need one piece of information: the container id.  You can easily find this by running the command: `docker ps -a` to list all the current containers and grab the id from the container id column.  
 
 Once you have the container id, you can then use this in the following command, and replacing <ContainerID> with your container id:
 
