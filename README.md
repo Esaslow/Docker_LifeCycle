@@ -150,6 +150,18 @@ Its preferred to destroy container, only if present in stopped state instead of 
 
 This removes any evidence of the container on your machine allowing you to easily enjoy speed increases while the information is hosted elsewhere.
 
+At any time we can check where the container is in the lifecycle by using the command `docker ps -a` which we used above multiple times.
+
+Play around with these different commands and talk in your pairs about why you may want to use each of these states.  Once you feel comfortable with this information, please move on to the final step and complete the assesment.
+
 #### Assessment
+For the assessment, you need to follow these instructions:
+1. Make a Unbuntu Container 
+2. Detach from the container and check that it is still running
+3. Change the state of the container to paused 
+4. Run the command `docker ps -a > assess.txt`
+5. Shutdown and remove the container
+6. Take the assess.txt file and send it to your instructor
 
 #### Feedback
+[Please provide feedback on how this class went & your experiance with docker today](https://docs.google.com/forms/d/e/1FAIpQLSfxNTxE8JSr5EmO1CK93lm7SjvulszjjMTCrDPynJJpPxXpeQ/viewform?usp=sf_link)
