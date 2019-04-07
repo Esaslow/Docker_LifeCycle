@@ -102,7 +102,7 @@ $ docker container ls --all
 Awesome so we are now going to the fun part!  We are actually going to create a Container that will have some functional components!  We will begin by starting a container in an interactive mode so that we can better understand the fundamental concept of what a container is. 
 
 Overview:  We will start an unbuntu container and run it in an interactive mode.  Underneath the hood, the container behaves exactly like a ubuntu virtual machine with a command line.  This means that we treat the container as if it where a remote computer that has no ability to access your file system.  You can look around in the file system to verify this without being afraid of hurting anything!  To begin to explore the ubuntu containter, user the following command:
-- `docker run -it ubuntu bash`
+- `$ docker run -it ubuntu bash`
 
 
 |  `docker` | `run` | `-it` | `ubuntu` | `bash` |
@@ -115,18 +115,18 @@ If you want to exit out of it, you can use the following command to *detach* fro
 
 - *Detach*: `CTRL + P` then `CTRL + Q`
 
-- *Attach*: `docker attach CONTAINER` where you must specify the *Container ID* 
+- *Attach*: `$ docker attach CONTAINER` where you must specify the *Container ID* 
 
 #### Pausing the Container
-Now that you are out of the container, let go ahead and check the status of the containers running on the computer!  Remember how we did that above?  `docker ps -a`
+Now that you are out of the container, let go ahead and check the status of the containers running on the computer!  Remember how we did that above?  `$ docker ps -a`
 
 You should see that you have a container that as of a couple of minutes ago was up.  This means that you still have that container running in the background.  Lets explore the different states that we can put this container in!
 
-The first state we will look at is *paused* To pause your container, we need one piece of information: the container id.  You can easily find this by running the command: `docker ps -a` to list all the current containers and grab the id from the container id column.  
+The first state we will look at is *paused* To pause your container, we need one piece of information: the container id.  You can easily find this by running the command: `$ docker ps -a` to list all the current containers and grab the id from the container id column.  
 
 Once you have the container id, you can then use this in the following command, and replacing <ContainerID> with your container id:
 
-- `docker pause <containerid or name>`
+- `$ docker pause <containerid or name>`
 
 This pauses all of the running processes that are currently running inside of the container.  
 
@@ -134,7 +134,7 @@ This pauses all of the running processes that are currently running inside of th
 
 Now, we can go ahead and unpause the container with a command that is formatted very similarly
 
-- `docker unpause <containerid or name>`
+- `$ docker unpause <containerid or name>`
 
 On a quick sidenote, it is easy to name your container with a specific convention and then use this isntead of the id.
 
@@ -144,11 +144,11 @@ On a quick sidenote, it is easy to name your container with a specific conventio
 You will begin to notice that many of these commands are in the same format.
 
 To stop the container and processes running inside the container:
-- `docker stop <container-id/name>`
+- `$ docker stop <container-id/name>`
 
 To start a container, you can use the generic run method that we have used above or you may use this command: 
 
-- `docker start <container-id/name>`
+- `$ docker start <container-id/name>`
 
 Even when a container is stopped, it is still staking up a mall amount of resources.  That is why we will learn to remove them later on.
 
@@ -157,18 +157,18 @@ Even when a container is stopped, it is still staking up a mall amount of resour
 
 It is used to restart the container as well as processes running inside the container.
 
-`docker restart <container-id/name>`
+`$ docker restart <container-id/name>`
 
 #### Kill
 We can kill the running container.
 
-`docker kill <container-id/name>`
+`$ docker kill <container-id/name>`
 
 #### Destroy
 
 Its preferred to destroy container, only if present in stopped state instead of forcefully destroying the running container.
 
-`docker rm <container-id/name>`
+`$ docker rm <container-id/name>`
 
 This removes any evidence of the container on your machine allowing you to easily enjoy speed increases while the information is hosted elsewhere.
 
@@ -181,7 +181,7 @@ For the assessment, you need to follow these instructions:
 1. Make an Unbuntu Container 
 2. Detach from the container and check that it is still running
 3. Change the state of the container to paused 
-4. Run the command `docker ps -a > assess.txt`
+4. Run the command `$ docker ps -a > assess.txt`
 5. Shutdown and remove the container
 6. Take the assess.txt file and send it to your instructor
 
@@ -191,7 +191,7 @@ For the assessment, you need to follow these instructions:
 
 To remove all the stopped docker containers
 
-`docker rm $(docker ps -q -f status=exited)`
+`$ docker rm $(docker ps -q -f status=exited)`
 
 
 ### docker command reference
