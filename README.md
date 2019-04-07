@@ -117,13 +117,38 @@ Now, we can go ahead and unpause the container with a command that is formatted 
 On a quick sidenote, it is easy to name your container with a specific convention and then use this isntead of the id.
 
 
-#### Start 
+#### Stopping / Starting a Container
+
+You will begin to notice that many of these commands are in the same format.
+
+To stop the container and processes running inside the container:
+- `docker stop <container-id/name>`
+
+To start a container, you can use the generic run method that we have used above or you may use this command: 
+
+- `docker start <container-id/name>`
+
+Even when a container is stopped, it is still staking up a mall amount of resources.  That is why we will learn to remove them later on.
+
 
 #### Restart
 
+It is used to restart the container as well as processes running inside the container.
+
+`docker restart <container-id/name>`
+
 #### Kill
+We can kill the running container.
+
+`docker kill <container-id/name>`
 
 #### Destroy
+
+Its preferred to destroy container, only if present in stopped state instead of forcefully destroying the running container.
+
+`docker rm <container-id/name>`
+
+This removes any evidence of the container on your machine allowing you to easily enjoy speed increases while the information is hosted elsewhere.
 
 #### Assessment
 
