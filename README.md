@@ -156,7 +156,7 @@ Play around with these different commands and talk in your pairs about why you m
 
 #### Assessment
 For the assessment, you need to follow these instructions:
-1. Make a Unbuntu Container 
+1. Make an Unbuntu Container 
 2. Detach from the container and check that it is still running
 3. Change the state of the container to paused 
 4. Run the command `docker ps -a > assess.txt`
