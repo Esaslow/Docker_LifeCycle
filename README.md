@@ -170,3 +170,20 @@ For the assessment, you need to follow these instructions:
 To remove all the stopped docker containers
 
 `docker rm $(docker ps -q -f status=exited)`
+
+
+### docker command reference
+| command | description |
+|:--|:--|
+|`docker container ls`| # List all running containers|
+|`docker ps` | # List all running containers|
+|`docker container ls -a` |  # List all containers, even those not running|
+|`docker container stop CONTAINER_ID_OR_NAME` | # Gracefully stop the specified container|
+|`docker container kill CONTAINER_ID_OR_NAME` | # Force shutdown of the specified container|
+|`docker container rm CONTAINER_ID_OR_NAME`  |   # Remove specified container from this machine|
+|`docker container rm $(docker container ls -a -q)` | # Remove all containers|
+|`docker image ls -a`  | # List all images on this machine|
+|`docker image rm IMAGE_ID_OR_NAME` | # Remove specified image from this machine|
+|`docker image rm $(docker image ls -a -q)`   |# Remove all images from this machine|
+|`docker login` |# Log in this CLI session using your Docker credentials|
+
