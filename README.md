@@ -176,7 +176,7 @@ At any time we can check where the container is in the lifecycle by using the co
 
 Play around with these different commands and talk in your pairs about why you may want to use each of these states.  Once you feel comfortable with this information, please move on to the final step and complete the assesment.
 
-#### Assessment
+## Assessment
 For the assessment, you need to follow these instructions:
 1. Make an Unbuntu Container 
 2. Detach from the container and check that it is still running
