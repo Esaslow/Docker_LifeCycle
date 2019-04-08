@@ -136,7 +136,7 @@ Now, we can go ahead and unpause the container with a command that is formatted 
 
 - `$ docker unpause <containerid or name>`
 
-On a quick sidenote, it is easy to name your container with a specific convention and then use this isntead of the id.
+On a quick sidenote, it is easy to name your container with a specific convention and then use this instead of the id.
 
 
 #### Stopping / Starting a Container
