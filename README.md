@@ -1,6 +1,6 @@
 # Docker Lifecycle Management Technical Exercise
 
-[image](https://cdn-images-1.medium.com/max/1600/0*n55Hpt45JHStBWvJ.jpeg)
+![image](https://cdn-images-1.medium.com/max/1600/0*n55Hpt45JHStBWvJ.jpeg)
 
 ### Introduction
 Today we are going to explore Container Lifecycle Management with Docker.  We will work with the basics of containers and work through how to use them directly for different applications.  This assignment is graded on completion by you.  If you do not make it all the way to the end of the tutorial, feel free to continue to work on the assignment at home!
